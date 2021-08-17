@@ -1,60 +1,60 @@
 import java.util.Scanner;
 class DayOne {
-public static void main(String[] args) {
-System.out.println("WELCOME TO PROGRAMME.....");
-int choice;
-Scanner sc=new Scanner(System.in);
-do{
-System.out.println("Main Menu ....");
-System.out.println("1. To convert decimal number to Binary number = ");
-System.out.println("2. To convert Binary number to Decimal number = ");
-System.out.println("3. To Exit.");
-choice=sc.nextInt();
-switch(choice)
-{
-case 1:
-DecimaltoBinary();
-break;
-case 2:
-BinarytoDecimal();
-break;
-default:
-break;
-}
-}while(choice!=3);
-}
-static void DecimaltoBinary()
-{
-int n;
-System.out.println("Enter the number to convert in Binary format = ");
-Scanner in=new Scanner(System.in);
-n=in.nextInt();
-int temp=n;
-int binary=0,rem,i=1;
-while(temp>0)
-{
-rem=temp%2;
-binary=binary +remi;
-i=i10;
-temp=temp/2;
-}
-System.out.println("After conversion = "+binary);
-}
-static void BinarytoDecimal(){
-int b;
-int rem,dec=0,i=0;
-System.out.println("Enter the Binary number to convert into decimal = ");
-Scanner input=new Scanner(System.in);
-b=input.nextInt();
-int t=b;
-while(t>0)
-{
-rem=t%10;
-dec=(int) (dec+(rem*Math.pow(2, i)));
-t=t/10;
-++i;
-}
-System.out.println("After conversion = "+dec);
-}
-
+	public static void main(String[] args) {
+	    System.out.println("WELCOME TO PROGRAMME.....");
+	    int choice;
+	    Scanner sc=new Scanner(System.in);
+	    do{
+	    	System.out.println("Main Menu ....");
+	    	System.out.println("1. To convert decimal number to Binary number = ");
+	    	System.out.println("2. To convert Binary number to Decimal number = ");
+	    	System.out.println("3. To Exit.");
+	    	choice=sc.nextInt();
+	    	switch(choice)
+		    {
+		    case 1:
+		    	DecimaltoBinary();
+		    	break;
+		    case 2:
+		    	BinarytoDecimal();
+		    	break;
+		    	default:
+		    		break;
+		    }
+	    }while(choice!=3);
+	}
+	static void DecimaltoBinary()
+	{
+		int n;
+		System.out.println("Enter the number to convert in Binary format = ");
+		Scanner in=new Scanner(System.in);
+		n=in.nextInt();
+		int temp=n;
+		int binary=0,rem,i=1;
+		while(temp>0)
+		{
+			rem=temp%2;
+			binary=binary +rem*i;
+					i=i*10;
+			temp=temp/2;
+		}
+		System.out.println("After conversion = "+binary);
+	}
+	static void BinarytoDecimal(){
+		int b;
+		int rem,dec=0,i=0;
+		System.out.println("Enter the Binary number to convert into decimal = ");
+		Scanner input=new Scanner(System.in);
+		b=input.nextInt();
+		int t=b;
+		while(t>0)
+		{
+			rem=t%10;
+			dec=(int) (dec+(rem*Math.pow(2, i)));
+			t=t/10;
+			++i;
+		}
+		System.out.println("After conversion = "+dec);
+	}
+	
 }
